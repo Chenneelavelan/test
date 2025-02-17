@@ -3,6 +3,7 @@ const app = express();
 const xlsx = require('xlsx');
 
 app.use(express.json());
+app.use(cors());
 
 // Importing students from the separate file
 const workbook = xlsx.readFile('data/full_student_dataset.xlsx');
